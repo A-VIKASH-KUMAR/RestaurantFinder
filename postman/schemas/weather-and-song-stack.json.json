@@ -1,38 +1,116 @@
 {
-  "openapi" : "3.0.1",
-  "info" : {
-    "title" : "weather-and-song-stack",
-    "version" : "1.0"
+  "openapi": "3.0.1",
+  "info": {
+    "title": "weather-and-song-stack",
+    "version": "1.0"
   },
-  "servers" : [ {
-    "url" : "https://dz0pf9ial5.execute-api.ap-south-1.amazonaws.com/{basePath}",
-    "variables" : {
-      "basePath" : {
-        "default" : "Prod"
+  "servers": [
+    {
+      "url": "https://dz0pf9ial5.execute-api.ap-south-1.amazonaws.com/{basePath}",
+      "variables": {
+        "basePath": {
+          "default": "Stage"
+        }
       }
     }
-  } ],
-  "paths" : {
-    "/weather" : {
-      "post" : {
-        "x-amazon-apigateway-integration" : {
-          "httpMethod" : "POST",
-          "uri" : "arn:aws:apigateway:ap-south-1:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-south-1:857895966874:function:weather-and-song-stack-rapidApiAndWeatherFunction-qJ8ATzx0MpsR/invocations",
-          "passthroughBehavior" : "when_no_match",
-          "type" : "aws_proxy"
+  ],
+  "paths": {
+    "/weather": {
+      "post": {
+        "x-amazon-apigateway-integration": {
+          "type": "aws_proxy",
+          "httpMethod": "POST",
+          "uri": "arn:aws:apigateway:ap-south-1:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-south-1:857895966874:function:weather-and-song-stack-rapidApiAndWeatherFunction-qJ8ATzx0MpsR/invocations",
+          "passthroughBehavior": "when_no_match"
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "example": {
+                      "city_weather": "Haze"
+                    }
+                }
+            }
+          }
         }
       }
     },
-    "/song" : {
-      "post" : {
-        "x-amazon-apigateway-integration" : {
-          "httpMethod" : "POST",
-          "uri" : "arn:aws:apigateway:ap-south-1:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-south-1:857895966874:function:weather-and-song-stack-rapidApiAndWeatherFunction-qJ8ATzx0MpsR/invocations",
-          "passthroughBehavior" : "when_no_match",
-          "type" : "aws_proxy"
+    "/song": {
+      "post": {
+        "x-amazon-apigateway-integration": {
+          "type": "aws_proxy",
+          "httpMethod": "POST",
+          "uri": "arn:aws:apigateway:ap-south-1:lambda:path/2015-03-31/functions/arn:aws:lambda:ap-south-1:857895966874:function:weather-and-song-stack-rapidApiAndWeatherFunction-qJ8ATzx0MpsR/invocations",
+          "passthroughBehavior": "when_no_match"
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "example":{
+                      "songs": {
+                        "uri": "spotify:track:3ZEno9fORwMA1HPecdLi0R",
+                        "id": "3ZEno9fORwMA1HPecdLi0R",
+                        "name": "HAPPY",
+                        "albumOfTrack": {
+                          "uri": "spotify:album:6zaisPwfcIAfdUGPj3mmGY",
+                          "name": "HOPE",
+                          "coverArt": {
+                            "sources": [
+                              {
+                                "url": "https://i.scdn.co/image/ab67616d00001e02ff8a4276b3be31c839557439",
+                                "width": 300,
+                                "height": 300
+                              },
+                              {
+                                "url": "https://i.scdn.co/image/ab67616d00004851ff8a4276b3be31c839557439",
+                                "width": 64,
+                                "height": 64
+                              },
+                              {
+                                "url": "https://i.scdn.co/image/ab67616d0000b273ff8a4276b3be31c839557439",
+                                "width": 640,
+                                "height": 640
+                              }
+                            ]
+                          },
+                          "id": "6zaisPwfcIAfdUGPj3mmGY",
+                          "sharingInfo": {
+                            "shareUrl": "https://open.spotify.com/album/6zaisPwfcIAfdUGPj3mmGY?si=JIkdrjvRQbSu36-t1I5YGg"
+                          }
+                        },
+                        "artists": {
+                          "items": [
+                            {
+                              "uri": "spotify:artist:6fOMl44jA4Sp5b9PpYCkzz",
+                              "profile": {
+                                "name": "NF"
+                              }
+                            }
+                          ]
+                        },
+                        "contentRating": {
+                          "label": "NONE"
+                        },
+                        "duration": {
+                          "totalMilliseconds": 242691
+                        },
+                        "playability": {
+                          "playable": true
+                        }
+                      }
+                    }
+                  
+                
+              }
+            }
+          }
         }
       }
     }
   },
-  "components" : { }
+  "components": {}
 }

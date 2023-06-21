@@ -1,0 +1,171 @@
+{
+	"info": {
+		"_postman_id": "0f773118-8e80-4280-808b-28ea68c46e38",
+		"name": "weather and song api doc ",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/weather",
+			"id": "f79a85b5-1985-4553-9792-8808d59808e4",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/weather",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"weather"
+					],
+					"variable": [
+						{
+							"id": "6774a7e6-6424-4f3f-ba11-b1c041ccc263",
+							"key": "basePath",
+							"value": "{{basePath}}"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"id": "913743a4-f1ec-45a9-9360-b83450bd2507",
+					"name": "OK",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/weather",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"weather"
+							],
+							"variable": [
+								{
+									"key": "basePath",
+									"value": "{{basePath}}"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"responseTime": null,
+					"body": "{\n  \"city_weather\": \"Haze\"\n}"
+				}
+			]
+		},
+		{
+			"name": "/song",
+			"id": "ae48bfac-d2fd-42bc-a685-897e29b9fa81",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/song",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"song"
+					],
+					"variable": [
+						{
+							"id": "46b2d7c4-4fad-4bfc-8010-4dda31227f8f",
+							"key": "basePath",
+							"value": "{{basePath}}"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"id": "062073f1-c882-43f7-8f8a-60152226d1cf",
+					"name": "OK",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/song",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"song"
+							],
+							"variable": [
+								{
+									"key": "basePath",
+									"value": "{{basePath}}"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"responseTime": null,
+					"body": "{\n  \"songs\": {\n    \"uri\": \"spotify:track:3ZEno9fORwMA1HPecdLi0R\",\n    \"id\": \"3ZEno9fORwMA1HPecdLi0R\",\n    \"name\": \"HAPPY\",\n    \"albumOfTrack\": {\n      \"uri\": \"spotify:album:6zaisPwfcIAfdUGPj3mmGY\",\n      \"name\": \"HOPE\",\n      \"coverArt\": {\n        \"sources\": [\n          {\n            \"url\": \"https://i.scdn.co/image/ab67616d00001e02ff8a4276b3be31c839557439\",\n            \"width\": 300,\n            \"height\": 300\n          },\n          {\n            \"url\": \"https://i.scdn.co/image/ab67616d00004851ff8a4276b3be31c839557439\",\n            \"width\": 64,\n            \"height\": 64\n          },\n          {\n            \"url\": \"https://i.scdn.co/image/ab67616d0000b273ff8a4276b3be31c839557439\",\n            \"width\": 640,\n            \"height\": 640\n          }\n        ]\n      },\n      \"id\": \"6zaisPwfcIAfdUGPj3mmGY\",\n      \"sharingInfo\": {\n        \"shareUrl\": \"https://open.spotify.com/album/6zaisPwfcIAfdUGPj3mmGY?si=JIkdrjvRQbSu36-t1I5YGg\"\n      }\n    },\n    \"artists\": {\n      \"items\": [\n        {\n          \"uri\": \"spotify:artist:6fOMl44jA4Sp5b9PpYCkzz\",\n          \"profile\": {\n            \"name\": \"NF\"\n          }\n        }\n      ]\n    },\n    \"contentRating\": {\n      \"label\": \"NONE\"\n    },\n    \"duration\": {\n      \"totalMilliseconds\": 242691\n    },\n    \"playability\": {\n      \"playable\": true\n    }\n  }\n}"
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"id": "0d259aab-eb60-41cb-8305-89019fd6a35b",
+			"key": "basePath",
+			"value": "Stage",
+			"type": "any"
+		},
+		{
+			"id": "1a6b9686-09d2-488b-96f5-6a45611b0206",
+			"key": "baseUrl",
+			"value": "https://dz0pf9ial5.execute-api.ap-south-1.amazonaws.com/{{basePath}}",
+			"type": "string"
+		}
+	]
+}
