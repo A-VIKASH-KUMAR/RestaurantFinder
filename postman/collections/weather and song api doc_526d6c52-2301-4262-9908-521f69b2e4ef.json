@@ -152,6 +152,27 @@
 					"body": "{\n  \"songs\": {\n    \"uri\": \"spotify:track:3ZEno9fORwMA1HPecdLi0R\",\n    \"id\": \"3ZEno9fORwMA1HPecdLi0R\",\n    \"name\": \"HAPPY\",\n    \"albumOfTrack\": {\n      \"uri\": \"spotify:album:6zaisPwfcIAfdUGPj3mmGY\",\n      \"name\": \"HOPE\",\n      \"coverArt\": {\n        \"sources\": [\n          {\n            \"url\": \"https://i.scdn.co/image/ab67616d00001e02ff8a4276b3be31c839557439\",\n            \"width\": 300,\n            \"height\": 300\n          },\n          {\n            \"url\": \"https://i.scdn.co/image/ab67616d00004851ff8a4276b3be31c839557439\",\n            \"width\": 64,\n            \"height\": 64\n          },\n          {\n            \"url\": \"https://i.scdn.co/image/ab67616d0000b273ff8a4276b3be31c839557439\",\n            \"width\": 640,\n            \"height\": 640\n          }\n        ]\n      },\n      \"id\": \"6zaisPwfcIAfdUGPj3mmGY\",\n      \"sharingInfo\": {\n        \"shareUrl\": \"https://open.spotify.com/album/6zaisPwfcIAfdUGPj3mmGY?si=JIkdrjvRQbSu36-t1I5YGg\"\n      }\n    },\n    \"artists\": {\n      \"items\": [\n        {\n          \"uri\": \"spotify:artist:6fOMl44jA4Sp5b9PpYCkzz\",\n          \"profile\": {\n            \"name\": \"NF\"\n          }\n        }\n      ]\n    },\n    \"contentRating\": {\n      \"label\": \"NONE\"\n    },\n    \"duration\": {\n      \"totalMilliseconds\": 242691\n    },\n    \"playability\": {\n      \"playable\": true\n    }\n  }\n}"
 				}
 			]
+		},
+		{
+			"name": "New Request",
+			"id": "a84096c7-30d4-43d7-8db0-30d44d4d7f3a",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/test",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"test"
+					]
+				}
+			},
+			"response": []
 		}
 	],
 	"variable": [
